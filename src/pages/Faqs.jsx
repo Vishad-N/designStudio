@@ -138,8 +138,8 @@ export default function Faqs() {
           {FAQ_GROUPS.map(group => (
             <div key={group.id} id={group.id} className="faq-group-section">
               {group.items.map((item, i) => (
-                <div className="faq-item" key={i}>
-                  <button>
+                <div className={`faq-item ${openItems[group.id] === i ? 'open' : ''}`} key={i}>
+                  <button onClick={() => toggleItem(group.id, i)} aria-expanded={openItems[group.id] === i}>
                     {item.q}
                     <span className="faq-icon">+</span>
                   </button>

@@ -19,6 +19,7 @@ import Quiet from '../components/Quiet.jsx'
 import Key from '../components/Key.jsx'
 import Footer from '../components/Footer.jsx'
 import ChatWidget from '../components/ChatWidget.jsx'
+import MobileNavbar from '../components/MobileNavbar.jsx'
 
 export default function Home() {
   const [activeColor, setActiveColor] = useState(1)
@@ -76,6 +77,7 @@ export default function Home() {
       <Key />
       <Footer />
       <ChatWidget visible={showChat} />
+      <MobileNavbar />
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import Header from './Header'
 
 const COLORS = [
   { id: 0, hex: '#16a34a', img: '/assets/chair-green.png' },
@@ -21,32 +22,7 @@ export default function Hero({ activeColor, setActiveColor }) {
     <section className={`hero-stage ${isRevealed ? 'is-revealed' : ''}`} id="home" ref={revealRef}>
       <div className="hero-frame">
         <div className="hero-bg-layer" />
-        <header className="nav reveal-label">
-          <nav className="nav-left">
-            <Link viewTransition className="nav-pill active" to="/">home</Link>
-            <Link viewTransition to="/about-us">about us</Link>
-            <Link viewTransition to="/faqs">faqs</Link>
-            <Link viewTransition to="/products">products</Link>
-          </nav>
-
-          <Link viewTransition className="logo" to="/"><span>design studio.</span></Link>
-
-          <div className="nav-right">
-            <div className="nav-actions">
-              <button className="icon-btn" aria-label="Search">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
-                </svg>
-              </button>
-              <button className="icon-btn" aria-label="Account">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="8" r="3.2" /><path d="M5 19c1.5-3.2 4-4.8 7-4.8S17.5 15.8 19 19" />
-                </svg>
-              </button>
-              <Link className="contact-btn" to="/contact">Contact</Link>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <button className="side-arrow left reveal-label stagger-1" aria-label="Previous product">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="M15 6l-6 6 6 6" /></svg>
@@ -56,7 +32,8 @@ export default function Hero({ activeColor, setActiveColor }) {
         </button>
 
         <div className="hero-canvas">
-          <div className="wordmark" aria-hidden="true">
+          {/* Desktop Wordmark (hidden on mobile) */}
+          <div className="wordmark hide-on-mobile" aria-hidden="true">
             <span className="wm-left reveal-headline stagger-1">
               <span className="hover-letter">d</span>
               <span className="hover-letter">e</span>
@@ -69,28 +46,46 @@ export default function Hero({ activeColor, setActiveColor }) {
               <span className="hover-letter">n</span>
             </span>
           </div>
+          
+          <div className="chair-stage">
+            <img src={chair} alt="Signature sculptural lounge chair" />
+            <button className="hotspot hs-a hide-on-mobile" aria-label="Material detail" />
+            <button className="hotspot hs-b hide-on-mobile" aria-label="Upholstery detail" />
+            <button className="hotspot hs-c hide-on-mobile" aria-label="Base detail" />
+            <div className="tooltip hide-on-mobile">
+              Premium microfiber upholstery: soft, durable, and easy to care for
+            </div>
+            <span className="since hide-on-mobile">Since 2015</span>
+          </div>
 
-          <p className="hero-copy reveal-headline stagger-3">
+          {/* Desktop Text (hidden on mobile) */}
+          <p className="hero-copy hide-on-mobile reveal-headline stagger-2">
             We create designer interiors that don’t just
             complement a home — they become its accent.
             Each project is a combination of architectural
             form, tactile pleasure and visual harmony.
           </p>
 
-          <a className="cta-pill reveal-headline stagger-3" href="#spaces">
-            View All Collections
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{marginLeft: 8}}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          {/* Mobile Text (hidden on desktop) */}
+          <div className="hero-copy hero-m-copy mobile-only reveal-headline stagger-2">
+            <h1 className="hero-m-title">
+              Design interiors<br />that hold a life.
+            </h1>
+            <p className="hero-m-sub">
+              We compose rooms you can<br />touch — plan, material, light.
+            </p>
+          </div>
 
-          <div className="chair-stage">
-            <img src={chair} alt="Signature sculptural lounge chair" />
-            <button className="hotspot hs-a" aria-label="Material detail" />
-            <button className="hotspot hs-b" aria-label="Upholstery detail" />
-            <button className="hotspot hs-c" aria-label="Base detail" />
-            <div className="tooltip">
-              Premium microfiber upholstery: soft, durable, and easy to care for
-            </div>
-            <span className="since">Since 2015</span>
+          <div className="hero-cta-row" style={{ display: 'flex', gap: '16px', alignItems: 'center', flexWrap: 'wrap', width: '100%' }}>
+            <a className="cta-pill reveal-headline stagger-3" href="#spaces" style={{ flex: '1 1 auto', justifyContent: 'center' }}>
+              View all collections
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" style={{marginLeft: 8}}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          {/* Mobile Footer (hidden on desktop) */}
+          <div className="hero-since mobile-only reveal-headline stagger-3">
+            Since 2015 · Mumbai, Pune, Bengaluru, Delhi
           </div>
 
           <div className="swatches reveal-media stagger-3" data-parallax="hero-fast">

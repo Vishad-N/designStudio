@@ -18,7 +18,7 @@ export default function Offer() {
         </div>
         <div className="offer-grid">
           {offers.map((o) => (
-            <article className="offer-card" key={o.tag}>
+            <article className="offer-card" key={o.tag} tabIndex={0}>
               <span>{o.tag}</span>
               <h3>{o.title}</h3>
               <p>{o.body}</p>

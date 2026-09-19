@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import MobileNavbar from './MobileNavbar.jsx'
 
 export default function Layout({ children }) {
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function Layout({ children }) {
         {children}
       </main>
       <Footer />
+      <MobileNavbar />
     </div>
   )
 }

@@ -1,0 +1,11 @@
+{
+  "ts": 1789805578.59552,
+  "iso": "2026-09-19T13:42:58",
+  "event": "pre_tool",
+  "channel": "hook",
+  "ok": true,
+  "detail": "inject chars=9987",
+  "project_id": "visha-90fc8883",
+  "cwd": "C:\\Users\\visha\\Downloads\\design-studio-homepage (1)\\design-studio-homepage\\react-app\\src\\pages",
+  "pid": 35760
+}

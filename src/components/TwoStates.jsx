@@ -39,7 +39,7 @@ export default function TwoStates() {
     
     const handleTouchMove = (e) => {
       if (!isDragging) return
-      handleMove(e.touches[0].clientX)
+      handleMove(e.touches[0])
     }
 
     const handleMouseUp = () => {

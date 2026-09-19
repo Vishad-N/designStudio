@@ -51,7 +51,7 @@ function TypewriterHeading() {
   }, [charIndex, isDeleting, textIndex]);
 
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '500px', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '0 24px', paddingTop: '160px', boxSizing: 'border-box', overflow: 'hidden', zIndex: 0 }}>
+    <div className="typewriter-hero" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '500px', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '0 24px', paddingTop: '160px', boxSizing: 'border-box', overflow: 'hidden', zIndex: 0 }}>
       {/* Blueprint background elements for central attraction effect */}
       <img src="/floor_plan.jpg" alt="" style={{
         position: 'absolute',
