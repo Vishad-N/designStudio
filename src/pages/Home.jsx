@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import Seo from '../components/Seo.jsx'
 import Hero from '../components/Hero.jsx'
 import Audience from '../components/Audience.jsx'
 import Reels from '../components/Reels.jsx'
@@ -54,8 +55,29 @@ export default function Home() {
     return () => observer.disconnect()
   }, [])
 
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "InteriorDesign",
+    "name": "Design Studio",
+    "image": "https://dsinterior.in/assets/chair-hero.jpg",
+    "url": "https://dsinterior.in",
+    "telephone": "+919131676785",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "description": "Premium interior design services based in Mumbai, Pune, Bengaluru, and Delhi. We create designer interiors that don’t just complement a home — they become its accent.",
+    "priceRange": "$$$$"
+  };
+
   return (
     <div className="page">
+      <Seo 
+        url="https://dsinterior.in/" 
+        schema={localBusinessSchema} 
+      />
       <div ref={heroRef}>
         <Hero activeColor={activeColor} setActiveColor={setActiveColor} />
       </div>

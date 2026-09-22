@@ -157,7 +157,7 @@ export default function Hero({ activeColor, setActiveColor }) {
               </a>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-              <img src="/assets/consultant-new.png" alt="Lead designer" />
+              <img src="/assets/consultant-new.png" alt="Deepali Khandelwal - Lead Interior Designer" />
               <div style={{ fontWeight: 'bold', fontSize: '10px', textAlign: 'center', marginTop: '6px', lineHeight: '1.2', color: 'var(--ink)' }}>
                 -By Deepali<br/>Khandelwal
               </div>

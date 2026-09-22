@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import Layout from '../components/Layout.jsx'
 import Key from '../components/Key.jsx'
 import { projects } from '../data/projects.js'
@@ -41,6 +42,11 @@ export default function Products() {
 
   return (
     <Layout>
+      <Seo 
+        title="Portfolio & Work — Houses as chapters" 
+        description="Explore our portfolio of premium interior design projects across Mumbai, Pune, Bengaluru, and Delhi. Filter by room, city, and property type." 
+        url="https://dsinterior.in/products"
+      />
       <main className="portfolio-page">
         {/* HERO & FILTERS */}
         <section className="portfolio-hero wrap inner-section" style={{paddingBottom: '40px'}}>

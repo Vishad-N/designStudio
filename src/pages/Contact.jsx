@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import Layout from '../components/Layout.jsx'
 
 export default function Contact() {
@@ -34,8 +35,29 @@ export default function Contact() {
     }, 1500)
   }
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Design Studio Contact",
+    "image": "https://dsinterior.in/assets/chair-hero.jpg",
+    "telephone": "+919131676785",
+    "email": "dsaraogi8283@gmail.com",
+    "url": "https://dsinterior.in/contact",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressCountry": "IN"
+    }
+  };
+
   return (
     <Layout>
+      <Seo 
+        title="Contact Us — Begin with the house" 
+        description="Book a 30-minute site review or send us your brief. Most first conversations are a site or plan review, not a pitch." 
+        url="https://dsinterior.in/contact"
+        schema={contactSchema}
+      />
       <main className="contact-page wrap inner-section">
         {/* HERO */}
         <div className="contact-hero text-center inner-hero-frame">

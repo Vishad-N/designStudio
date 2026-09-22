@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Seo from '../components/Seo.jsx'
 import Layout from '../components/Layout.jsx'
 import Key from '../components/Key.jsx'
 import Process from '../components/Process.jsx'
@@ -53,7 +54,7 @@ function TypewriterHeading() {
   return (
     <div className="typewriter-hero" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '500px', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '0 24px', paddingTop: '160px', boxSizing: 'border-box', overflow: 'hidden', zIndex: 0 }}>
       {/* Blueprint background elements for central attraction effect */}
-      <img src="/floor_plan.jpg" alt="" style={{
+      <img src="/floor_plan.jpg" alt="Architectural floor plan blueprint" style={{
         position: 'absolute',
         top: '-50%',
         left: '-20%',
@@ -66,7 +67,7 @@ function TypewriterHeading() {
         transform: 'rotate(12deg)',
         filter: 'contrast(1.2)'
       }} />
-      <img src="/floor_plan.jpg" alt="" style={{
+      <img src="/floor_plan.jpg" alt="Architectural floor plan blueprint" style={{
         position: 'absolute',
         bottom: '-60%',
         right: '-20%',
@@ -79,7 +80,7 @@ function TypewriterHeading() {
         transform: 'rotate(-18deg)',
         filter: 'contrast(1.2)'
       }} />
-      <img src="/floor_plan.jpg" alt="" style={{
+      <img src="/floor_plan.jpg" alt="Architectural floor plan blueprint" style={{
         position: 'absolute',
         top: '-40%',
         right: '-10%',
@@ -104,6 +105,11 @@ function TypewriterHeading() {
 export default function About() {
   return (
     <Layout>
+      <Seo 
+        title="About Our Studio" 
+        description="We compose interiors you can touch — plan, material, light, and one object that sets the room. Designing homes in Mumbai, Pune, Bengaluru, and Delhi since 2015." 
+        url="https://dsinterior.in/about"
+      />
       <main className="about-page">
         <section className="wrap inner-section" style={{ position: 'relative' }}>
           <TypewriterHeading />

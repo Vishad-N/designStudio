@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Seo from '../components/Seo.jsx'
 import Layout from '../components/Layout.jsx'
 import Key from '../components/Key.jsx'
 
@@ -110,9 +111,12 @@ export default function Faqs() {
 
   return (
     <Layout>
-      <script type="application/ld+json">
-        {JSON.stringify(schema)}
-      </script>
+      <Seo 
+        title="FAQs — Quiet questions answered" 
+        description="Frequently asked questions about working with Design Studio, our fee structure, timelines, and locations." 
+        url="https://dsinterior.in/faqs"
+        schema={schema}
+      />
       <main className="faqs-page wrap inner-section">
         <div className="faq-hero text-center inner-hero-frame">
           <div className="kicker">QUIET QUESTIONS</div>

@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import Seo from '../components/Seo.jsx'
 import Layout from '../components/Layout.jsx'
 import Key from '../components/Key.jsx'
 import { projects } from '../data/projects.js'
@@ -24,8 +26,36 @@ export default function ProductDetail() {
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": project.title,
+    "image": `https://dsinterior.in${project.featured_image}`,
+    "author": {
+      "@type": "Person",
+      "name": "Design Studio"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Design Studio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dsinterior.in/assets/logo.png"
+      }
+    },
+    "description": case_study.problem_brief.split('.')[0] + "."
+  };
+
   return (
     <Layout>
+      <Seo 
+        title={`${project.title} — ${project.city} Interior Design`}
+        description={articleSchema.description}
+        url={`https://dsinterior.in/products/${project.slug}`}
+        image={`https://dsinterior.in${project.featured_image}`}
+        type="article"
+        schema={articleSchema}
+      />
       <article className="case-study-page">
         {/* COVER */}
         <header className="cs-cover">
