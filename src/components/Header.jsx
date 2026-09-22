@@ -62,16 +62,6 @@ export default function Header() {
 
         <div className="nav-right">
           <div className="nav-actions">
-            <button className="icon-btn hide-on-mobile" aria-label="Search">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="7" /><path d="M20 20l-3.5-3.5" />
-              </svg>
-            </button>
-            <button className="icon-btn hide-on-mobile" aria-label="Account">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="12" cy="8" r="3.2" /><path d="M5 19c1.5-3.2 4-4.8 7-4.8S17.5 15.8 19 19" />
-              </svg>
-            </button>
             <Link className="contact-btn" to="/contact" style={{ margin: 0 }}>Contact</Link>
           </div>
         </div>

@@ -85,7 +85,7 @@ export default function Contact() {
               {isSuccess ? (
                 <div className="success-state">
                   <h3>The brief is in. We will write within two working days.</h3>
-                  <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="contact-btn">Message on WhatsApp &rarr;</a>
+                  <a href="https://wa.me/919131676785" target="_blank" rel="noreferrer" className="contact-btn">Message on WhatsApp &rarr;</a>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="custom-form">
@@ -139,13 +139,7 @@ export default function Contact() {
                     </div>
                   )}
 
-                  <div className="input-group">
-                    <label>Plans or room photos <span className="optional">(optional, jpg/pdf, max 10MB)</span></label>
-                    <div className="file-upload-box">
-                      <input type="file" id="file" className="file-input" accept=".jpg,.jpeg,.png,.pdf" />
-                      <label htmlFor="file" className="file-label">Click to attach</label>
-                    </div>
-                  </div>
+
 
                   <div className="input-group">
                     <label>How should we reply</label>
@@ -183,8 +177,8 @@ export default function Contact() {
               <span>Delhi</span>
             </div>
             <div className="strip-item strip-contact text-right">
-              <a href="mailto:hello@designstudio.studio">hello@designstudio.studio</a>
-              <a href="tel:+919876543210">+91 98765 43210</a>
+              <a href="mailto:dsaraogi8283@gmail.com">dsaraogi8283@gmail.com</a>
+              <a href="tel:+919131676785">+91 91316 76785</a>
               <span>WhatsApp for site photos</span>
             </div>
           </div>

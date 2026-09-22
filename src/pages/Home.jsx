@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Hero from '../components/Hero.jsx'
 import Audience from '../components/Audience.jsx'
+import Reels from '../components/Reels.jsx'
 import Spaces from '../components/Spaces.jsx'
 import TwoStates from '../components/TwoStates.jsx'
 import Brief from '../components/Brief.jsx'
@@ -59,6 +60,7 @@ export default function Home() {
         <Hero activeColor={activeColor} setActiveColor={setActiveColor} />
       </div>
       <Audience />
+      <Reels />
       <Spaces />
       <TwoStates />
       <Brief />
