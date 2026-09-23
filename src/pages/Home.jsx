@@ -14,9 +14,9 @@ import Fee from '../components/Fee.jsx'
 import Philosophy from '../components/Philosophy.jsx'
 import Process from '../components/Process.jsx'
 import Site from '../components/Site.jsx'
-import Press from '../components/Press.jsx'
+
 import Voices from '../components/Voices.jsx'
-import Bench from '../components/Bench.jsx'
+
 import Quiet from '../components/Quiet.jsx'
 import Key from '../components/Key.jsx'
 import Footer from '../components/Footer.jsx'
@@ -64,11 +64,11 @@ export default function Home() {
     "telephone": "+919131676785",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Mumbai",
+      "addressLocality": "Indore",
       "addressRegion": "Maharashtra",
       "addressCountry": "IN"
     },
-    "description": "Premium interior design services based in Mumbai, Pune, Bengaluru, and Delhi. We create designer interiors that don’t just complement a home — they become its accent.",
+    "description": "Premium interior design services based in Indore, Pune, Bengaluru, and Delhi. We create designer interiors that don’t just complement a home — they become its accent.",
     "priceRange": "$$$$"
   };
 
@@ -94,9 +94,9 @@ export default function Home() {
       <Philosophy />
       <Process />
       <Site />
-      <Press />
+
       <Voices />
-      <Bench />
+
       <Quiet />
       <Key />
       <Footer />

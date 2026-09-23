@@ -112,15 +112,7 @@ export default function TwoStates() {
           </div>
         </div>
         
-        <div className="slider-meta">
-          <span>PUNE</span>
-          <span className="dot">·</span>
-          <span>180 SQ FT</span>
-          <span className="dot">·</span>
-          <span>11 WEEKS</span>
-          <span className="dot">·</span>
-          <span>KITCHEN</span>
-        </div>
+
       </div>
     </section>
   )

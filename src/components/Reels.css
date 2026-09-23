@@ -1,17 +1,20 @@
 .reels-section {
   background-color: #ffffff;
-  padding: 80px 20px;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .reels-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  max-width: 1200px;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.mySwiper {
+  width: 100%;
+  padding: 20px 0; /* Adding some padding to allow hover effects to not clip */
 }
 
 .reel-video {
